@@ -27,6 +27,7 @@ class Auth {
    */
   static localParam(req, res, next) {
     const id = parseInt(req.params.idClient);
+
     if (id >= 0) {
       Auth._local(req, res, next, id);
     } else {
