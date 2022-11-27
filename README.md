@@ -3,3 +3,4 @@ Ce dépôt contient du code qui implémente notre proposition des interfaces pou
 Thomas Arcand
 Simon Tremblay
 Hervé Labrie-Durand
+Caroline Lacroix
