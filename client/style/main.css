@@ -96,12 +96,12 @@ nav{
 
 #texte-acceuil, #section-inscription, #section-pdv{
     width: 66%;
-    margin-left: 34%;
+    margin-left: 27%;
 }
 
 #menu-gauche{
     position: absolute;
-    width:30%;
+    width:25%;
     text-align: center;
     font-size: x-large;
 }
@@ -227,4 +227,9 @@ form .group select{
 
 .centrer {
     text-align: center;
+}
+
+#logoProgramme {
+    text-align: left;
+    padding-left: 50px;
 }
