@@ -13,6 +13,10 @@ router.get('/', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/accueil.html'));
 });
 
+router.get('/commande', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/commande.html'));
+});
+
 router.get('/inscription', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/inscription.html'));
 });

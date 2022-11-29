@@ -1,0 +1,84 @@
+<br>
+<h4 class="Info_livraison">Informations de livraison</h4>
+<br>
+<div class="Info_livraison">
+    <form>
+        <label class="p-1" for="pays">Pays:</label>
+        <select name="pays" id="pays" required>
+            <option value=""></option>
+            <option value="Canada">Canada</option>
+        </select>
+        <br>
+        <br>
+        <label class="p-1" for="nom" >Nom Complet:</label>
+        <input type="text" id="nom" name="nom" required>
+        <br>
+        <br>
+        <label class="p-1" for="telephone" >Numéro de téléphone:</label>
+        <input type="text" id="telephone" name="telephone" pattern="^\d{10}$" title="Votre entrée doit contenir exactement 10 chiffres" required>
+        <div id="telephoneErrorMsg" class="msgError"></div>
+        <br>
+        <br>
+        <label class="p-1" for="adresse" >Adresse:</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Adresse postale" required>
+        <br>
+        <br>
+        <label class="p-1" for="appartment" style="color:white">&#x200B;</label>
+        <input type="text" id="appartment" name="appartment" placeholder="Appartement, suite, unité, bâtiment">
+        <br>
+        <br>
+        <label class="p-1" for="ville">Ville:</label>
+        <input type="text" id="ville" name="ville" required>
+        <br>
+        <br>
+        <label class="p-1" for="province">Province/Territoire:</label>
+        <select name="province" id="province" required>
+            <option value=""></option>
+            <option value="Alberta">Alberta</option>
+            <option value="Colombie-Britannique">Colombie-Britannique</option>
+            <option value="Ile-du-Prince-Édouard">Ile-du-Prince-Édouard</option>
+            <option value="Manitoba">Manitoba</option>
+            <option value="Nouveau-Brunswick">Nouveau-Brunswick</option>
+            <option value="Nouvelle-Ecosse">Nouvelle-Ecosse</option>
+            <option value="Nunavut">Nunavut</option>
+            <option value="Ontario">Ontario</option>
+            <option value="Quebec">Quebec</option>
+            <option value="Saskatchewan">Saskatchewan</option>
+            <option value="Terre-Neuve-et-Labrador">Terre-Neuve-et-Labrador</option>
+            <option value="Territoires du Nord-Ouest">Territoires du Nord-Ouest</option>
+            <option value="Yukon">Yukon</option>
+        </select>
+        <br>
+        <br>
+        <label class="p-1" for="codePostal"  >Code Postal:</label>
+        <input type="text" id="codePostal" name="codePostal" style="position: absolute;left: 17%;width: 80%;" pattern="([abceghjklmnprstvxyABCEGHJKLMNPRSTVXY]\d)([abceghjklmnprstvxyABCEGHJKLMNPRSTVXY]\d){2}" title="Votre entrée doit être sous la forme A1A1A1" required>
+        <div id="codePostalErrorMsg" class="msgError"></div>
+        <br>
+        <br>
+        <label class="p-1" for="modeLivraison">Mode de livraison:</label>
+        <select name="modeLivraison" id="modeLivraison" required>
+            <option value=""></option>
+            <option value="Standard">Standard</option>
+            <option value="Express">Express</option>
+        </select>
+        <br>
+        <br>
+        <label class="p-1" for="modePaiement">Mode de paiement:</label>
+        <select name="modePaiement" id="modePaiement" required>
+            <option value=""></option>
+            <option value="Visa">Visa</option>
+            <option value="MasterCard">MasterCard</option>
+        </select>
+        <br>
+        <br>
+        <label class="p-1" for="numeroCarte" >Numéro de la carte:</label>
+        <input type="text" id="numeroCarte" name="numeroCarte" pattern="^\d{16}$" title="Votre entrée doit contenir exactement 16 chiffres" required>
+        <br>
+        <br>
+        <label class="p-1" for="dateExpiration" >Date d'expiration:</label>
+        <input type="text" id="dateExpiration" name="dateExpiration" pattern="^(0[1-9]|1[0-2])/([0-9]{4})$" title="Votre entrée doit être sous la forme MM/AAAA" required>
+        <br>
+        <br>
+        <button type="submit">Validate</button>
+    </form>
+</div>

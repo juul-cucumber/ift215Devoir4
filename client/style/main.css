@@ -244,3 +244,27 @@ form .group select{
 #tableFiltres {
     display: inline-block;
 }
+
+.Info_livraison {
+    width: 90%;
+    padding-left: 2%;
+}
+.Info_livraison input {
+    margin: auto;
+    position: absolute;
+    left: 17%;
+    width: 80%;
+}
+.Info_livraison select {
+    position: absolute;
+    left: 17%;
+    width: 80%;
+    height: 30px;
+}
+
+.msgError {
+    color: red;
+    font-size: 70%;
+    position: absolute;
+    left: 17%;
+}
