@@ -40,8 +40,13 @@ function item_to_html(item) {
             '</button>' +
             '</p>');
 
+    item_picture = $('<div></div>')
+        .addClass(' rounded-3 p-0 text-center')
+        .append('<br><img src="images/'+item.id+'.png" alt="Image de '+item.nom+'"  class=" rounded-3 my-0 fw-normal" style="height: 120px;"/>');
 
-    item_card.append(item_head).append(item_body);
+
+
+    item_card.append(item_head).append(item_picture).append(item_body);
 
     return $('<div></div>').addClass('col-md-3').append(item_card);
 }

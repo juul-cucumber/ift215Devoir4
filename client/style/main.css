@@ -233,3 +233,14 @@ form .group select{
     text-align: left;
     padding-left: 50px;
 }
+
+#filtresProduits {
+    display: inline-block;
+    text-align: left;
+    width: 30%;
+    padding-bottom: 10px;
+}
+
+#tableFiltres {
+    display: inline-block;
+}
