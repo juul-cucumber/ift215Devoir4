@@ -40,8 +40,13 @@ function item_to_html(item) {
             '</button>' +
             '</p>');
 
+    item_picture = $('<div></div>')
+        .addClass(' rounded-3 p-0 text-center')
+        .append('<br><img src="images/produits/'+item.id+'.png" alt="Image de '+item.nom+'"  class=" rounded-3 my-0 fw-normal" style="height: 120px;"/>');
 
-    item_card.append(item_head).append(item_body);
+
+
+    item_card.append(item_head).append(item_picture).append(item_body);
 
     return $('<div></div>').addClass('col-md-3').append(item_card);
 }
@@ -51,10 +56,59 @@ function chargerproduit() {
     $.ajax({
         url: "/produits",
         success: function (result) {
+            $('#list_items').empty();
             // console.log(result);
             $.each(result, function (key, value) {
                 item = item_to_html(value);
                 $('#list_items').append(item);
+            });
+        }
+    });
+}
+
+function chargerProduitSupplements() {
+    $.ajax({
+        url: "/produits",
+        success: function (result) {
+            $('#list_items').empty();
+            // console.log(result);
+            $.each(result, function (key, value) {
+                if(value.categorie.nom === "Suppléments") {
+                    item = item_to_html(value);
+                    $('#list_items').append(item);
+                }
+            });
+        }
+    });
+}
+
+function chargerProduitNourriture() {
+    $.ajax({
+        url: "/produits",
+        success: function (result) {
+            $('#list_items').empty();
+            // console.log(result);
+            $.each(result, function (key, value) {
+                if(value.categorie.nom === "Nourriture") {
+                    item = item_to_html(value);
+                    $('#list_items').append(item);
+                }
+            });
+        }
+    });
+}
+
+function chargerProduitBouteilles() {
+    $.ajax({
+        url: "/produits",
+        success: function (result) {
+            $('#list_items').empty();
+            // console.log(result);
+            $.each(result, function (key, value) {
+                if(value.categorie.nom === "Bouteilles") {
+                    item = item_to_html(value);
+                    $('#list_items').append(item);
+                }
             });
         }
     });
