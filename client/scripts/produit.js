@@ -42,7 +42,7 @@ function item_to_html(item) {
 
     item_picture = $('<div></div>')
         .addClass(' rounded-3 p-0 text-center')
-        .append('<br><img src="images/'+item.id+'.png" alt="Image de '+item.nom+'"  class=" rounded-3 my-0 fw-normal" style="height: 120px;"/>');
+        .append('<br><img src="images/produits/'+item.id+'.png" alt="Image de '+item.nom+'"  class=" rounded-3 my-0 fw-normal" style="height: 120px;"/>');
 
 
 
