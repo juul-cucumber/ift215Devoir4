@@ -56,10 +56,59 @@ function chargerproduit() {
     $.ajax({
         url: "/produits",
         success: function (result) {
+            $('#list_items').empty();
             // console.log(result);
             $.each(result, function (key, value) {
                 item = item_to_html(value);
                 $('#list_items').append(item);
+            });
+        }
+    });
+}
+
+function chargerProduitSupplements() {
+    $.ajax({
+        url: "/produits",
+        success: function (result) {
+            $('#list_items').empty();
+            // console.log(result);
+            $.each(result, function (key, value) {
+                if(value.categorie.nom === "Suppléments") {
+                    item = item_to_html(value);
+                    $('#list_items').append(item);
+                }
+            });
+        }
+    });
+}
+
+function chargerProduitNourriture() {
+    $.ajax({
+        url: "/produits",
+        success: function (result) {
+            $('#list_items').empty();
+            // console.log(result);
+            $.each(result, function (key, value) {
+                if(value.categorie.nom === "Nourriture") {
+                    item = item_to_html(value);
+                    $('#list_items').append(item);
+                }
+            });
+        }
+    });
+}
+
+function chargerProduitBouteilles() {
+    $.ajax({
+        url: "/produits",
+        success: function (result) {
+            $('#list_items').empty();
+            // console.log(result);
+            $.each(result, function (key, value) {
+                if(value.categorie.nom === "Bouteilles") {
+                    item = item_to_html(value);
+                    $('#list_items').append(item);
+                }
             });
         }
     });
