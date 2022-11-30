@@ -33,5 +33,4 @@ router.get('/connexion', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/connexion.html'));
 });
 
-
 module.exports = router
