@@ -96,7 +96,7 @@
         "nom": "CLIF BUILDERS",
         "description": "Protein Bars - Chocolate Mint - (68 Gram Non-GMO Bars, 12 Count)",
         "prix": 22.99,
-        "qte_inventaire": 998,
+        "qte_inventaire": 997,
         "categorie": {
             "id": 2,
             "nom": "Nourriture",

@@ -51,3 +51,29 @@ function versCommande() {
         }
     });
 }
+
+function inscrireNewClient(){
+    let PRENOM = document.getElementById("prenom").value;
+    let NOM = document.getElementById("nom").value;
+    let AGE = document.getElementById("age").value;
+    let ADRESSE = document.getElementById("adresse").value;
+    let PAYS = document.getElementById("pays").value;
+    let COURRIEL = document.getElementById("courriel").value;
+    let MDP = document.getElementById("mdp").value;
+
+    $.ajax({
+        url: "/clients/",
+        method: "POST",
+        data:JSON.stringify({"mdp":MDP,"prenom":PRENOM,"nom":NOM,"age":AGE,"adresse":ADRESSE,"pays":PAYS,"courriel":COURRIEL}),
+        contentType: "application/json",
+        // success: function (result){
+        //     document.getElementById(`messageValide`).setAttribute("style","display:block")
+        //     setTimeout(()=>{
+        //         document.getElementById(`messageValide`).setAttribute("style","display:none")
+        //     },2500)
+        // },
+        // error: function (result){
+        //     document.getElementById(`messageInvalide`).setAttribute("style","display:block")
+        // }
+    });
+}

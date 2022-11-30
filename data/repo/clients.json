@@ -9,7 +9,7 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 572.49,
+            "valeur": 595.48,
             "items": [
                 {
                     "id": 0,
@@ -89,7 +89,7 @@
                     "nomProduit": "CLIF BUILDERS",
                     "descriptionProduit": "Protein Bars - Chocolate Mint - (68 Gram Non-GMO Bars, 12 Count)",
                     "prix": 22.99,
-                    "quantite": 1
+                    "quantite": 2
                 }
             ]
         },
@@ -122,6 +122,21 @@
         "pays": "Canada",
         "courriel": "qwer@tyu.com",
         "mdp": "$2b$08$SYOkCCz.wRs49Pv89.ohP.e.uoiQGcya7y5Vw9bRCAqmGtyoP6hi2",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 3,
+        "prenom": "Caroline",
+        "nom": "Lacroix",
+        "age": 22,
+        "adresse": "1199 Rue du Saint Brieux",
+        "pays": "dsdas",
+        "courriel": "caro9.lacroix@hotmail.com",
+        "mdp": "$2b$08$kO05/X1/wVmcG.GWbQ5YCOHN47C5gxhwhl4q8GijYJyZKA8DIHMni",
         "panier": {
             "valeur": 0,
             "items": []

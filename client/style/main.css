@@ -270,3 +270,7 @@ form .group select{
     height: 50px;
     line-height: 70px;
 }
+
+.bouton_inscription{
+    text-align: center;
+}
