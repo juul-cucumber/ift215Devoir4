@@ -2,7 +2,6 @@ const express = require('express');
 const gClients = require('./../util/gestionnaires').gClients;
 const { validate, Joi } = require('express-validation');
 const auth = require('./../middleware/auth');
-
 const router = express.Router();
 
 const adresseIdValidation = {
