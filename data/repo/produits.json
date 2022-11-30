@@ -5,7 +5,7 @@
         "nom": "BioSteel Whey",
         "description": "Hormone Free and Non-GMO Post Workout Formula, Chocolate, 25 Servings",
         "prix": 49.99,
-        "qte_inventaire": 998,
+        "qte_inventaire": 997,
         "categorie": {
             "id": 0,
             "nom": "Suppléments",
@@ -18,7 +18,7 @@
         "nom": "Quest Protein Bars",
         "description": "Nutrition S'mores Protein Bar, High Protein, Low Carb, Gluten Free, Keto Friendly, 12 Count",
         "prix": 42.99,
-        "qte_inventaire": 999,
+        "qte_inventaire": 998,
         "categorie": {
             "id": 2,
             "nom": "Nourriture",
@@ -44,7 +44,7 @@
         "nom": "GIFUBOWA Big 3L",
         "description": "Motivational Water Bottle with Time Marking",
         "prix": 21.99,
-        "qte_inventaire": 998,
+        "qte_inventaire": 997,
         "categorie": {
             "id": 1,
             "nom": "Bouteilles",
@@ -70,7 +70,7 @@
         "nom": "Authentic Protein Bars",
         "description": "Peanut Butter Candy Protein Bars - Meal Replacement Protein Snack Bars w/ 16g Whey Protein",
         "prix": 35.99,
-        "qte_inventaire": 999,
+        "qte_inventaire": 998,
         "categorie": {
             "id": 2,
             "nom": "Nourriture",
@@ -96,7 +96,7 @@
         "nom": "CLIF BUILDERS",
         "description": "Protein Bars - Chocolate Mint - (68 Gram Non-GMO Bars, 12 Count)",
         "prix": 22.99,
-        "qte_inventaire": 999,
+        "qte_inventaire": 998,
         "categorie": {
             "id": 2,
             "nom": "Nourriture",

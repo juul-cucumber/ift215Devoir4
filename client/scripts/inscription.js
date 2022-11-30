@@ -24,4 +24,32 @@ function attacherListenerMenuGauche(){
  */
 async function chargerinscription (){
     attacherListenerMenuGauche()
+
+}
+
+function versCommande(){
+    let COURRIEL = document.getElementById("courriel").value;
+    let MDP = document.getElementById("mot-de-passe").value;
+
+    $.ajax({
+        url: "/connexion/" + ID_CLIENT,
+        method:"POST",
+        data:JSON.stringify({"courriel":COURRIEL,"mdp":MDP}),
+        contentType: "application/json",
+        success: function(result){
+            TOKEN_CLIENT = result.token;
+            TOKEN_ADMIN = result.token;
+            ID_CLIENT = result.idClient;
+
+            if(result.role === 'admin'){
+                window.location.replace('#/commandes')
+            }
+            else{
+                window.location.replace('#/produit')
+            }
+        },
+        error: function (result) {
+            window.location.replace('#/');
+        }
+    });
 }

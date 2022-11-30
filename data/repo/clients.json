@@ -9,7 +9,7 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 398.54,
+            "valeur": 572.49,
             "items": [
                 {
                     "id": 0,
@@ -48,6 +48,46 @@
                     "idProduit": 5,
                     "nomProduit": "Gemful 1L",
                     "descriptionProduit": "2 pack squeeze water bottles, Sport Leak Proof Hockey Water Bottles BPA Free",
+                    "prix": 22.99,
+                    "quantite": 1
+                },
+                {
+                    "id": 5,
+                    "idProduit": 8,
+                    "nomProduit": "Authentic Protein Bars",
+                    "descriptionProduit": "Peanut Butter Candy Protein Bars - Meal Replacement Protein Snack Bars w/ 16g Whey Protein",
+                    "prix": 35.99,
+                    "quantite": 1
+                },
+                {
+                    "id": 6,
+                    "idProduit": 9,
+                    "nomProduit": "Quest Protein Bars",
+                    "descriptionProduit": "Nutrition S'mores Protein Bar, High Protein, Low Carb, Gluten Free, Keto Friendly, 12 Count",
+                    "prix": 42.99,
+                    "quantite": 1
+                },
+                {
+                    "id": 7,
+                    "idProduit": 11,
+                    "nomProduit": "BioSteel Whey",
+                    "descriptionProduit": "Hormone Free and Non-GMO Post Workout Formula, Chocolate, 25 Servings",
+                    "prix": 49.99,
+                    "quantite": 1
+                },
+                {
+                    "id": 8,
+                    "idProduit": 10,
+                    "nomProduit": "GIFUBOWA Big 3L",
+                    "descriptionProduit": "Motivational Water Bottle with Time Marking",
+                    "prix": 21.99,
+                    "quantite": 1
+                },
+                {
+                    "id": 9,
+                    "idProduit": 6,
+                    "nomProduit": "CLIF BUILDERS",
+                    "descriptionProduit": "Protein Bars - Chocolate Mint - (68 Gram Non-GMO Bars, 12 Count)",
                     "prix": 22.99,
                     "quantite": 1
                 }
