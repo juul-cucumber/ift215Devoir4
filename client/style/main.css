@@ -245,17 +245,17 @@ form .group select{
     display: inline-block;
 }
 
-.Info_livraison {
+.Info_commande {
     width: 90%;
     padding-left: 2%;
 }
-.Info_livraison input {
+.Info_commande input {
     margin: auto;
     position: absolute;
     left: 17%;
     width: 80%;
 }
-.Info_livraison select {
+.Info_commande select {
     position: absolute;
     left: 17%;
     width: 80%;

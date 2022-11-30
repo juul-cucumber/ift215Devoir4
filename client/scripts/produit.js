@@ -57,7 +57,6 @@ function chargerproduit() {
         url: "/produits",
         success: function (result) {
             $('#list_items').empty();
-            // console.log(result);
             $.each(result, function (key, value) {
                 item = item_to_html(value);
                 $('#list_items').append(item);
@@ -137,6 +136,23 @@ function chargerpanier() {
             });
         }
     });
+}
+
+// const confirmCommande = () => {
+//     let result = confirm("Êtes-vous certain de vouloir continuer?")
+//     if(!result) {
+//         event.preventDefault();
+//     }
+//     else {
+//         document.getElementById('form_commande').submit();
+//     }
+// }
+
+const confirmation = () => {
+    let result = confirm("Êtes-vous certain de vouloir continuer?")
+    if(!result) {
+        event.preventDefault();
+    }
 }
 
 
