@@ -245,7 +245,7 @@ form .group select{
     display: inline-block;
 }
 
-.boutonConnexion{
+#boutonConnexion{
     padding-right: 50px;
     text-align: right;
     position: absolute;
