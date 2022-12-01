@@ -28,10 +28,11 @@ async function chargerinscription (){
 
 function versCommande() {
     let COURRIEL = document.getElementById("courriel").value;
-    let MDP = document.getElementById("mot-de-passe").value;
+    let MDP = document.getElementById("mdp").value;
+    console.log(document.getElementById("courriel").value);
 
     $.ajax({
-        url: "/connexion/" + ID_CLIENT,
+        url: "/connexion/",
         method: "POST",
         data: JSON.stringify({"courriel": COURRIEL, "mdp": MDP}),
         contentType: "application/json",
@@ -39,9 +40,10 @@ function versCommande() {
             TOKEN_CLIENT = result.token;
             TOKEN_ADMIN = result.token;
             ID_CLIENT = result.idClient;
+            console.log(result);
 
             if (result.role === 'admin') {
-                window.location.replace('#/commandes')
+                window.location.replace('#/accueil')
             } else {
                 window.location.replace('#/produit')
             }
