@@ -19,6 +19,12 @@ const statusVenteValidation = {
   })
 };
 
+const livrerVenteValidation = {
+  params: Joi.object({
+    idVente: Joi.number().integer().required()
+  })
+};
+
 const ajoutVenteValidation = {
   body: Joi.object({
     idClient: Joi.number().integer().required()
@@ -63,8 +69,14 @@ router.get('/:idVente', auth.admin, validate(adresseIdValidation), gVentes.recup
 router.put('/:idVente', auth.admin, validate(statusVenteValidation), gVentes.modifierStatus.bind(gVentes));
 
 /**
+ * Modifie le status d'une vente pour 'en route'
+ */
+router.put('/:idVente/livrer', validate(livrerVenteValidation), gVentes.livrer.bind(gVentes));
+
+/**
  * Annule une vente, mais seulement si elle n'a pas été préparée
  */
 router.delete('/:idVente', auth.localBody, validate(effacerVenteValidation), gVentes.annulerVente.bind(gVentes));
+
 
 module.exports = router;

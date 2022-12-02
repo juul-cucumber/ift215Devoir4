@@ -74,8 +74,10 @@ class CollectionClient {
      * @returns {*[]|*}
      */
   recupereClient(id) {
+    console.log("récupérer le client: " + id);
+    console.log(this.liste_clients);
     if (id > -1) {
-      return this.liste_clients.find(x => x.id === id);
+      return this.liste_clients.find(x => parseInt(x.id) == parseInt(id));
     } else {
       return this.liste_clients;
     }
@@ -235,7 +237,7 @@ class CollectionClient {
    * @returns {number}
    */
   getClientIndex(idClient) {
-    return this.liste_clients.findIndex(obj => obj.id === idClient);
+    return this.liste_clients.findIndex(obj => obj.id == idClient);
   }
 
   /**
@@ -293,7 +295,12 @@ class CollectionClient {
     const indexClient = this.getClientIndex(idClient);
     const panier = this.liste_clients[indexClient].panier;
     const itemIndex = panier.items.findIndex(obj => obj.id === item.id);
-    panier.items.splice(itemIndex, 1);
+    const qte = panier.items[itemIndex].quantite;
+    if(qte == 1)
+      panier.items.splice(itemIndex, 1);
+    else {
+      panier.items[itemIndex].quantite = (qte - 1)
+    }
     this.calculePanier(idClient);
     return panier;
   }
@@ -310,6 +317,12 @@ class CollectionClient {
     this.sauvegarder();
   }
 
+  supprimerPanier(client) {
+    const indexClient = this.getClientIndex(client.id);
+    this.liste_clients[indexClient].panier = new Panier(0, []);
+    this.sauvegarder();
+  }
+
   /**
    * Modifie le status d'un élément de l'historique
    * @param vente
@@ -318,7 +331,9 @@ class CollectionClient {
   modifierStatusHistorique(vente, status) {
     const indexClient = this.getClientIndex(vente.idClient);
     const indexVente = this.liste_clients[indexClient].historique.findIndex(obj => obj.id === vente.id);
+
     this.liste_clients[indexClient].historique[indexVente].status = status;
+
     this.sauvegarder();
   }
 }

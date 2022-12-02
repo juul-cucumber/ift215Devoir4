@@ -14,6 +14,21 @@ function add_item(id_item) {
         }
     });
 }
+//
+function remove_item(id_item) {
+    $.ajax({
+        url: "/clients/" + ID_CLIENT + "/panier/" + id_item,
+        method: "DELETE",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
+        },
+        success: function (result) {
+            console.log(result)
+            $('#cart_details').empty();
+            chargerpanier();
+        }
+    });
+}
 
 function item_to_html(item) {
     item_card = $('<div></div>')
@@ -56,7 +71,6 @@ function chargerproduit() {
         url: "/produits",
         success: function (result) {
             $('#list_items').empty();
-            // console.log(result);
             $.each(result, function (key, value) {
                 item = item_to_html(value);
                 $('#list_items').append(item);
@@ -130,10 +144,52 @@ function chargerpanier() {
                     "<td>" + value.prix + "</td> " +
                     "<td>" + value.quantite + "</td> " +
                     "<td>" + value.prix * value.quantite + "</td> " +
+                    "<td><input class='btn btn-dark' type='button' value='Retirer du panier' onclick='remove_item(" + value.id + ")'/></td> " +
                     "</tr>");
 
                 $('#cart_details').append(item);
             });
+        }
+    });
+}
+
+// const confirmCommande = () => {
+//     let result = confirm("Êtes-vous certain de vouloir continuer?")
+//     if(!result) {
+//         event.preventDefault();
+//     }
+//     else {
+//         document.getElementById('form_commande').submit();
+//     }
+// }
+
+const confirmation = () => {
+    let result = confirm("Êtes-vous certain de vouloir continuer?")
+    if(!result) {
+        event.preventDefault();
+    }
+}
+
+const confirmationCommande = () => {
+    let result = confirm("Êtes-vous certain de vouloir continuer?")
+    if(!result) {
+        event.preventDefault();
+    }
+
+    commanderPanier();
+}
+
+function commanderPanier() {
+    console.log("commande du panier")
+    $.ajax({
+        url: "/ventes",
+        method: "POST",
+        data: {"idClient": ID_CLIENT},
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
+        },
+        success: function (result) {
+            console.log(result);
         }
     });
 }

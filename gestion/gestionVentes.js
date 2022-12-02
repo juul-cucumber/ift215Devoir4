@@ -45,17 +45,24 @@ class GestionVentes {
    */
   ajouterVente(req, res) {
     const idClient = req.body.idClient;
+    // console.log("commande du client id: " + req.body.idClient)
+    console.log("commande request: " + req.body.idClient);
+
     const client = this.collectionClient.recupereClient(idClient);
+
+    //console.log("commande du panier")
     if (client) {
       if (client.panier.valeur > 0) {
-        const vente = new Vente(-1, idClient, client.panier.valeur, client.panier.items, this.statusPossibles.recue, new Date());
+        const vente = new Vente(-1, idClient, client.panier.valeur, client.panier.items, this.statusPossibles.prepare, new Date());
         this.collectionClient.acheterPanier(client, vente);
         this.collectionVente.ajouterVente(vente);
         res.send(vente);
       } else {
+        console.log("pas de panier actif " + idClient);
         res.status(400).send(`Le client ${idClient} n'a pas de panier actif`);
       }
     } else {
+      console.log("client introuvé " + idClient);
       res.status(400).send(`Le client ${idClient} n'a pas été trouvé`);
     }
   }
@@ -72,12 +79,30 @@ class GestionVentes {
       res.status(400).send(`La status ${status} n'est pas valide`);
       return;
     }
+
     const vente = this.collectionVente.recupereVentes(id);
     if (!vente) {
       res.status(400).send(`La vente avec l'id ${id} n'a pas été trouvée`);
       return;
     }
     this.collectionClient.modifierStatusHistorique(vente, status);
+    res.send(this.collectionVente.modifierVente(vente, status));
+  }
+
+  /**
+   * Modifie le status d'une vente. L'ID doit être là de même que le nouveau status
+   * @param req
+   * @param res
+   */
+  livrer(req, res) {
+
+    const id = parseInt(req.params.idVente);
+    const status = this.statusPossibles.en_route;
+    const vente = this.collectionVente.recupereVentes(id);
+    if (!vente) {
+      res.status(400).send(`La vente avec l'id ${id} n'a pas été trouvée`);
+      return;
+    }
     res.send(this.collectionVente.modifierVente(vente, status));
   }
 
