@@ -10,7 +10,7 @@ function chargerventes(){
             $.each(result, function (key, value) {
 
 
-                if(value.status === "prepare") {
+                if(value.status === "prepare" || value.status === "préparée") {
                     vente = $("<tr>" +
                         "<td>" + value.id + "</td> " +
                         "<td>" + value.date.slice(0,10) + "</td> " +
