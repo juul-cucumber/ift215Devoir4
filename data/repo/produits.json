@@ -5,7 +5,7 @@
         "nom": "BioSteel Whey",
         "description": "Hormone Free and Non-GMO Post Workout Formula, Chocolate, 25 Servings",
         "prix": 49.99,
-        "qte_inventaire": 998,
+        "qte_inventaire": 997,
         "categorie": {
             "id": 0,
             "nom": "Suppléments",

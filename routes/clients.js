@@ -1,5 +1,6 @@
 const express = require('express');
 const gClients = require('./../util/gestionnaires').gClients;
+const gVentes = require('./../util/gestionnaires').gVentes;
 const { validate, Joi } = require('express-validation');
 const auth = require('./../middleware/auth');
 const router = express.Router();
@@ -14,6 +15,12 @@ const panierItemIdValidation = {
   params: Joi.object({
     idClient: Joi.number().integer().required(),
     idItem: Joi.number().integer().required()
+  })
+};
+
+const supprimerPanierValidation = {
+  params: Joi.object({
+    idClient: Joi.number().integer().required()
   })
 };
 
@@ -127,5 +134,10 @@ router.put('/:idClient/panier/:idItem', validate(modifierPanierValidation, {}, {
  * Retire un item d'un panier.
  */
 router.delete('/:idClient/panier/:idItem', validate(panierItemIdValidation, {}, {}), auth.localParam, gClients.retirerPanier.bind(gClients));
+
+/**
+ * Commander le panier.
+ */
+router.post('/:idClient/panier', validate(supprimerPanierValidation, {}, {}), auth.localParam, gVentes.ajouterVente.bind(gClients));
 
 module.exports = router;

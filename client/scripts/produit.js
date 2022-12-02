@@ -155,6 +155,30 @@ const confirmation = () => {
     }
 }
 
+const confirmationCommande = () => {
+    let result = confirm("Êtes-vous certain de vouloir continuer?")
+    if(!result) {
+        event.preventDefault();
+    }
+
+    commanderPanier();
+}
+
+function commanderPanier() {
+    console.log("commande du panier")
+    $.ajax({
+        url: "/ventes",
+        method: "POST",
+        data: {"idClient": ID_CLIENT},
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
+        },
+        success: function (result) {
+            console.log(result);
+        }
+    });
+}
+
 
 $(function () {
 

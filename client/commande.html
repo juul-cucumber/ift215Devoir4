@@ -57,25 +57,26 @@
         <br>
         <h4>Informations de paiement</h4>
         <label class="p-1" for="modePaiement">Mode de paiement:</label>
-        <select name="modePaiement" id="modePaiement" required>
+        <select name="modePaiement" id="modePaiement" >
             <option value=""></option>
             <option value="Visa">Visa</option>
             <option value="MasterCard">MasterCard</option>
         </select>
         <br>
         <label class="p-1" for="numeroCarte" >Numéro de la carte:</label>
-        <input type="text" id="numeroCarte" name="numeroCarte" pattern="^\d{16}$" title="Votre entrée doit contenir exactement 16 chiffres" required>
+        <input type="text" id="numeroCarte" name="numeroCarte" pattern="^\d{16}$" title="Votre entrée doit contenir exactement 16 chiffres" >
         <br>
         <label class="p-1" for="dateExpiration" >Date d'expiration:</label>
-        <input type="text" id="dateExpiration" name="dateExpiration" placeholder="MM/AAAA" pattern="^(0[1-9]|1[0-2])/([0-9]{4})$" title="Votre entrée doit être sous la forme MM/AAAA" required>
+        <input type="text" id="dateExpiration" name="dateExpiration" placeholder="MM/AAAA" pattern="^(0[1-9]|1[0-2])/([0-9]{4})$" title="Votre entrée doit être sous la forme MM/AAAA" >
         <br>
         <label class="p-1" for="cvc" >CVC:</label>
-        <input type="text" id="cvc" name="cvc" pattern="^\d{3}$" title="Votre entrée doit contenir exactement 3 chiffres" required>
+        <input type="text" id="cvc" name="cvc" pattern="^\d{3}$" title="Votre entrée doit contenir exactement 3 chiffres" >
         <br>
         <br>
-        <a onclick="confirmation()">
-            <button type="submit" class="btn btn-primary position-relative" style="left:50%;">Commander</button>
+        <a onclick="commanderPanier()">
+            <button type="button" class="btn btn-primary position-relative" style="left:50%;">Commander</button>
         </a>
     </form>
+
 </div>
 

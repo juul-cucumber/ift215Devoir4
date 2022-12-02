@@ -78,4 +78,5 @@ router.put('/:idVente/livrer', validate(livrerVenteValidation), gVentes.livrer.b
  */
 router.delete('/:idVente', auth.localBody, validate(effacerVenteValidation), gVentes.annulerVente.bind(gVentes));
 
+
 module.exports = router;

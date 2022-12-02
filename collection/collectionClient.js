@@ -74,8 +74,10 @@ class CollectionClient {
      * @returns {*[]|*}
      */
   recupereClient(id) {
+    console.log("récupérer le client: " + id);
+    console.log(this.liste_clients);
     if (id > -1) {
-      return this.liste_clients.find(x => x.id === id);
+      return this.liste_clients.find(x => parseInt(x.id) == parseInt(id));
     } else {
       return this.liste_clients;
     }
@@ -306,6 +308,12 @@ class CollectionClient {
   acheterPanier(client, vente) {
     const indexClient = this.getClientIndex(client.id);
     this.liste_clients[indexClient].historique.push(vente);
+    this.liste_clients[indexClient].panier = new Panier(0, []);
+    this.sauvegarder();
+  }
+
+  supprimerPanier(client) {
+    const indexClient = this.getClientIndex(client.id);
     this.liste_clients[indexClient].panier = new Panier(0, []);
     this.sauvegarder();
   }
