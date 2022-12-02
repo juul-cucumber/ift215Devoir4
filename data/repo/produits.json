@@ -31,7 +31,7 @@
         "nom": "PreJym",
         "description": "A precise blend of 13 ingredients at full doses that have been shown through research and decades in the gym, to enhance training",
         "prix": 54.99,
-        "qte_inventaire": 997,
+        "qte_inventaire": 996,
         "categorie": {
             "id": 0,
             "nom": "Suppléments",
@@ -57,7 +57,7 @@
         "nom": "GIFUBOWA 2L",
         "description": "Big Drinking Bottle with Straw and Clean Brush Large for Sport and Work",
         "prix": 19.99,
-        "qte_inventaire": 998,
+        "qte_inventaire": 997,
         "categorie": {
             "id": 1,
             "nom": "Bouteilles",
