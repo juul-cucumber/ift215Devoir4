@@ -16,7 +16,7 @@ footer{
 }
 
 nav{
-   text-align: center;
+    text-align: center;
 }
 
 #menu-principal {
@@ -151,7 +151,6 @@ form .group select{
 .submit-group input[type=submit]{
     width: 150px
 }
-
 .submit-group {
     max-width: 500px;
     text-align: right;
@@ -245,7 +244,8 @@ form .group select{
 #tableFiltres {
     display: inline-block;
 }
-.boutonConnexion{
+
+#boutonConnexion{
     padding-right: 50px;
     text-align: right;
     position: absolute;
@@ -269,4 +269,8 @@ form .group select{
     width: 100%;
     height: 50px;
     line-height: 70px;
+}
+
+.bouton_inscription{
+    text-align: center;
 }
