@@ -274,3 +274,33 @@ form .group select{
     margin-left: auto;
     margin-right: auto;
 }
+#boutonConnexion{
+    padding-right: 50px;
+    text-align: right;
+    position: absolute;
+    top: 92px;
+    right: 10px;
+}
+
+.col-sm-4{
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px;
+}
+
+.bouton_Connexion{
+    width: 100%;
+    height: 50px;
+    line-height: 70px;
+}
+
+#inscription a:link{
+    width: 100%;
+    height: 50px;
+    line-height: 70px;
+}
+
+.bouton_inscription{
+    text-align: center;
+}
+

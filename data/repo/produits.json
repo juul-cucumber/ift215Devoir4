@@ -18,7 +18,7 @@
         "nom": "Quest Protein Bars",
         "description": "Nutrition S'mores Protein Bar, High Protein, Low Carb, Gluten Free, Keto Friendly, 12 Count",
         "prix": 42.99,
-        "qte_inventaire": 999,
+        "qte_inventaire": 998,
         "categorie": {
             "id": 2,
             "nom": "Nourriture",
@@ -70,7 +70,7 @@
         "nom": "Authentic Protein Bars",
         "description": "Peanut Butter Candy Protein Bars - Meal Replacement Protein Snack Bars w/ 16g Whey Protein",
         "prix": 35.99,
-        "qte_inventaire": 999,
+        "qte_inventaire": 998,
         "categorie": {
             "id": 2,
             "nom": "Nourriture",
@@ -83,7 +83,7 @@
         "nom": "Vega Sport Protein",
         "description": "Peanut Butter (45 Servings, 1.93kg) - Plant Based Vegan Protein Powder, BCAAs, Amino Acid, Tart Cherry, Non Whey, Gluten Free",
         "prix": 76.99,
-        "qte_inventaire": 997,
+        "qte_inventaire": 996,
         "categorie": {
             "id": 0,
             "nom": "Suppléments",
@@ -96,7 +96,7 @@
         "nom": "CLIF BUILDERS",
         "description": "Protein Bars - Chocolate Mint - (68 Gram Non-GMO Bars, 12 Count)",
         "prix": 22.99,
-        "qte_inventaire": 999,
+        "qte_inventaire": 997,
         "categorie": {
             "id": 2,
             "nom": "Nourriture",

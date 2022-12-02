@@ -30,7 +30,6 @@ function remove_item(id_item) {
     });
 }
 
-
 function item_to_html(item) {
     item_card = $('<div></div>')
         .addClass('card mb-4 rounded-3 shadow-sm');
