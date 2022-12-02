@@ -15,6 +15,21 @@ function add_item(id_item) {
     });
 }
 
+function remove_item(id_item) {
+    $.ajax({
+        url: "/clients/" + ID_CLIENT + "/panier/" + id_item,
+        method: "DELETE",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
+        },
+        success: function (result) {
+            console.log(result)
+            $('#cart_details').empty();
+            chargerpanier();
+        }
+    });
+}
+
 
 function item_to_html(item) {
     item_card = $('<div></div>')
@@ -130,6 +145,7 @@ function chargerpanier() {
                     "<td>" + value.prix + "</td> " +
                     "<td>" + value.quantite + "</td> " +
                     "<td>" + value.prix * value.quantite + "</td> " +
+                    "<td><input class='btn btn-dark' type='button' value='Retirer du panier' onclick='remove_item(" + value.id + ")'/></td> " +
                     "</tr>");
 
                 $('#cart_details').append(item);

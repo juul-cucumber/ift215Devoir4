@@ -31,7 +31,7 @@
         "nom": "PreJym",
         "description": "A precise blend of 13 ingredients at full doses that have been shown through research and decades in the gym, to enhance training",
         "prix": 54.99,
-        "qte_inventaire": 996,
+        "qte_inventaire": 993,
         "categorie": {
             "id": 0,
             "nom": "Suppléments",
@@ -44,7 +44,7 @@
         "nom": "GIFUBOWA Big 3L",
         "description": "Motivational Water Bottle with Time Marking",
         "prix": 21.99,
-        "qte_inventaire": 998,
+        "qte_inventaire": 1056,
         "categorie": {
             "id": 1,
             "nom": "Bouteilles",

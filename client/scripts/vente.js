@@ -15,7 +15,7 @@ function chargerventes(){
                         "<td>" + value.id + "</td> " +
                         "<td>" + value.date.slice(0,10) + "</td> " +
                         "<td>" + value.status + "</td> " +
-                        "<td><input class='sendButton' type='button' value='Ajouter à la livraison' onclick='livrer_vente(" + value.id + ")'/></td> " +
+                        "<td><input class='btn btn-dark' type='button' value='Ajouter à la livraison' onclick='livrer_vente(" + value.id + ")'/></td> " +
                         "</tr>");
 
                     $('#list_ventes').append(vente);
@@ -26,6 +26,7 @@ function chargerventes(){
                         "<td>" + value.id + "</td> " +
                         "<td>" + value.date.slice(0,10) + "</td> " +
                         "<td>" + value.status + "</td> " +
+                        "<td><input class='btn btn-dark' type='button' value='Ajouter à la livraison' onclick='livrer_vente(" + value.id + ")' disabled/></td> " +
                         "</tr>");
 
                     $('#list_ventes').append(vente);

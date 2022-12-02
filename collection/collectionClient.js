@@ -295,7 +295,12 @@ class CollectionClient {
     const indexClient = this.getClientIndex(idClient);
     const panier = this.liste_clients[indexClient].panier;
     const itemIndex = panier.items.findIndex(obj => obj.id === item.id);
-    panier.items.splice(itemIndex, 1);
+    const qte = panier.items[itemIndex].quantite;
+    if(qte == 1)
+      panier.items.splice(itemIndex, 1);
+    else {
+      panier.items[itemIndex].quantite = (qte - 1)
+    }
     this.calculePanier(idClient);
     return panier;
   }
