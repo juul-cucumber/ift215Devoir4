@@ -37,4 +37,8 @@ router.get('/deconnexion', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/deconnexion.html'));
 });
 
+router.get('/aide', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/aide.html'));
+});
+
 module.exports = router

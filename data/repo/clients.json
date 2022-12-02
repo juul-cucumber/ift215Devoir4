@@ -9,7 +9,7 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 645.0000000000001,
+            "valeur": 647.23,
             "items": [
                 {
                     "id": 0,
@@ -33,7 +33,7 @@
                     "nomProduit": "concombre",
                     "descriptionProduit": "pas un jouet",
                     "prix": 2.23,
-                    "quantite": 4
+                    "quantite": 5
                 },
                 {
                     "id": 3,
@@ -138,7 +138,7 @@
         "courriel": "caro9.lacroix@hotmail.com",
         "mdp": "$2b$08$kO05/X1/wVmcG.GWbQ5YCOHN47C5gxhwhl4q8GijYJyZKA8DIHMni",
         "panier": {
-            "valeur": 54.99,
+            "valeur": 109.98,
             "items": [
                 {
                     "id": 0,
@@ -146,9 +146,39 @@
                     "nomProduit": "PreJym",
                     "descriptionProduit": "A precise blend of 13 ingredients at full doses that have been shown through research and decades in the gym, to enhance training",
                     "prix": 54.99,
-                    "quantite": 1
+                    "quantite": 2
                 }
             ]
+        },
+        "historique": []
+    },
+    {
+        "id": 4,
+        "prenom": "Simon",
+        "nom": "Tremblay",
+        "age": 22,
+        "adresse": "1605 brulotte",
+        "pays": "canada",
+        "courriel": "tremblaysimon140@gmail.com",
+        "mdp": "$2b$08$ZOhySFHPUy5d6cBhH9xLtuZiQlLlPavTtoow8Gz6ou/w7QDjtVC9e",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 5,
+        "prenom": "Coco",
+        "nom": "Caca",
+        "age": 12,
+        "adresse": "2 fdsfs ",
+        "pays": "Inde",
+        "courriel": "rewew@12rfew.com",
+        "mdp": "$2b$08$cOFx7X9HX63mjIsRCcaMMOYxP1exbxZCIsSn8Bg0m6KQ3/6ac/X22",
+        "panier": {
+            "valeur": 0,
+            "items": []
         },
         "historique": []
     }

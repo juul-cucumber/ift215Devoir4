@@ -86,6 +86,10 @@ function deconnexion() {
 
 
 function inscriptionClient() {
+
+    console.log("fsfdrgra")
+    document.getElementById("texteInscription").style.display = " "
+
     let PRENOM = document.getElementById("prenom").value;
     let NOM = document.getElementById("nom").value;
     let AGE = document.getElementById("age").value;
@@ -117,4 +121,5 @@ function inscriptionClient() {
         //     document.getElementById(`messageInvalide`).setAttribute("style","display:block")
         // }
     });
+
 }
