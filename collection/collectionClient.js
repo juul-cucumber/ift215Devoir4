@@ -235,7 +235,7 @@ class CollectionClient {
    * @returns {number}
    */
   getClientIndex(idClient) {
-    return this.liste_clients.findIndex(obj => obj.id === idClient);
+    return this.liste_clients.findIndex(obj => obj.id == idClient);
   }
 
   /**
@@ -318,7 +318,9 @@ class CollectionClient {
   modifierStatusHistorique(vente, status) {
     const indexClient = this.getClientIndex(vente.idClient);
     const indexVente = this.liste_clients[indexClient].historique.findIndex(obj => obj.id === vente.id);
+
     this.liste_clients[indexClient].historique[indexVente].status = status;
+
     this.sauvegarder();
   }
 }

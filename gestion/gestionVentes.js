@@ -72,12 +72,30 @@ class GestionVentes {
       res.status(400).send(`La status ${status} n'est pas valide`);
       return;
     }
+
     const vente = this.collectionVente.recupereVentes(id);
     if (!vente) {
       res.status(400).send(`La vente avec l'id ${id} n'a pas été trouvée`);
       return;
     }
     this.collectionClient.modifierStatusHistorique(vente, status);
+    res.send(this.collectionVente.modifierVente(vente, status));
+  }
+
+  /**
+   * Modifie le status d'une vente. L'ID doit être là de même que le nouveau status
+   * @param req
+   * @param res
+   */
+  livrer(req, res) {
+
+    const id = parseInt(req.params.idVente);
+    const status = this.statusPossibles.en_route;
+    const vente = this.collectionVente.recupereVentes(id);
+    if (!vente) {
+      res.status(400).send(`La vente avec l'id ${id} n'a pas été trouvée`);
+      return;
+    }
     res.send(this.collectionVente.modifierVente(vente, status));
   }
 
