@@ -14,7 +14,7 @@ function add_item(id_item) {
         }
     });
 }
-
+//
 function remove_item(id_item) {
     $.ajax({
         url: "/clients/" + ID_CLIENT + "/panier/" + id_item,
