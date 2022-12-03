@@ -29,7 +29,7 @@
             <td>Livraison gratuite. Accès à tous les produits de base et les produits exclusifs offerts chez Pro-Gramme. Possibilité de participer au programme de fidéité.</td>
         </tr>
     </table>
-    <form method="post" action="confirmation.html">
+    <form action="#/confirmation">
         <fieldset id="#renseignement-auth">
             <legend>Renseignements d'authentification</legend>
             <div class="group">
@@ -58,7 +58,7 @@
             </div>
             <div class="group">
                 <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="mdp" required/>
+                <input type="password" name="mdp" id="mdp" pattern=".{8,}" title="Votre mot de passe doit contenir 8 caractères au minimum" required/>
             </div>
         </fieldset>
         <fieldset>
@@ -73,10 +73,7 @@
             </div>
         </fieldset>
         <div class="bouton_inscription">
-            <input type="button" class="btn btn-primary" value="Inscription" onclick="inscriptionClient()" />
-        </div>
-        <div class="texteInscription">
-            <p hidden> "Merci de votre inscription chez Pro-gramme!"</p>
+            <input type="submit" class="btn btn-primary" value="Inscription" onclick="verifInscription()" />
         </div>
     </form>
 </section>

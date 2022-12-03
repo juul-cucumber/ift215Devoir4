@@ -85,8 +85,9 @@ class GestionClient {
       const age = parseInt(req.query.age);
       const adresse = req.query.adresse;
       const pays = req.query.pays;
+      const courriel = req.query.courriel;
 
-      res.send(this.collectionClient.rechercheClient(prenom, nom, age, adresse, pays));
+      res.send(this.collectionClient.rechercheClient(prenom, nom, age, adresse, pays, courriel));
     } else { // sinon c'est un get avec ID ou sans contrainte
       let idClient = parseInt(req.params.idClient);
       if (!(idClient >= 0)) { // sans la parenthese, !idClient est évalué avant le >= parce que javascript

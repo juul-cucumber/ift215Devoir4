@@ -52,9 +52,10 @@ function ConnexionUtilisateur() {
             } else {
                 window.location.replace('#/produit')
             }
+            changerTexteConnexion()
         },
         error: function (result) {
-            window.location.replace('#/');
+            alert("Mot de passe invalide")
         }
 
 
@@ -87,6 +88,7 @@ function deconnexion() {
 
 function inscriptionClient() {
 
+    $('#texteInscription').text('Merci de votre inscription chez Pro-gramme!');
     console.log("fsfdrgra")
     document.getElementById("texteInscription").style.display = " "
 
@@ -98,28 +100,64 @@ function inscriptionClient() {
     let COURRIEL = document.getElementById("courriel").value;
     let MDP = document.getElementById("mdp").value;
 
+        $.ajax({
+            url: "/clients/",
+            method: "POST",
+            data: JSON.stringify({
+                "mdp": MDP,
+                "prenom": PRENOM,
+                "nom": NOM,
+                "age": AGE,
+                "adresse": ADRESSE,
+                "pays": PAYS,
+                "courriel": COURRIEL
+            }),
+            contentType: "application/json",
+        });
+}
+
+const verifInscription = () => {
+    let courriel = document.getElementById('courriel').value
+    let existe = false;
     $.ajax({
         url: "/clients/",
-        method: "POST",
-        data: JSON.stringify({
-            "mdp": MDP,
-            "prenom": PRENOM,
-            "nom": NOM,
-            "age": AGE,
-            "adresse": ADRESSE,
-            "pays": PAYS,
-            "courriel": COURRIEL
-        }),
-        contentType: "application/json",
-        // success: function (result){
-        //     document.getElementById(`messageValide`).setAttribute("style","display:block")
-        //     setTimeout(()=>{
-        //         document.getElementById(`messageValide`).setAttribute("style","display:none")
-        //     },2500)
-        // },
-        // error: function (result){
-        //     document.getElementById(`messageInvalide`).setAttribute("style","display:block")
-        // }
-    });
+        method: "GET",
+        success: function (result) {
+            result.forEach((item) => {
+                if(!existe) {
+                    if(item.courriel == courriel) {
+                        existe = true
+                    }
+                }
+            })
+            if(!existe) {
+                console.log(existe)
+                inscriptionClient()
+            }
+            else {
+                alert("Ce courriel existe déjà")
+            }
+        }
+    })
+
+}
+
+const verifConnexion = () => {
+    let courriel = document.getElementById('courriel').value;
+    console.log(courriel)
+    $.ajax({
+        url: `/clients/`,
+        method: "GET",
+        data:{"courriel": courriel},
+        success: function (result) {
+            console.log(result)
+            if(result.length == 0) {
+                alert("Ce courriel n'existe pas, veuillez vous inscrire")
+            }
+            else {
+                ConnexionUtilisateur()
+            }
+        }
+    })
 
 }
