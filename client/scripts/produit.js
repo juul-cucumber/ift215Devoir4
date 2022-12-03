@@ -135,7 +135,10 @@ function chargerpanier() {
             xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
         },
         success: function (result) {
-            console.log(result)
+            console.log(result.items.length == 0)
+            if(result.items.length == 0) {
+                $('#btnCommanderPanier').attr("hidden", true)
+            }
             $("#total").text(result.valeur);
             $.each(result.items, function (key, value) {
 
@@ -193,6 +196,25 @@ function commanderPanier() {
         }
     });
 }
+
+//
+//
+// const verifPanier = () => {
+//     $.ajax({
+//         url: "/clients/" + ID_CLIENT + "/panier",
+//         method: "GET",
+//         beforeSend: function (xhr) {
+//             xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
+//         },
+//         success: function (result) {
+//             if(result.items.length == 0) {
+//                 alert("Vous ne pouvez faire une commande sans produit dans votre panier")
+//             }
+//             else
+//                 confirmation()
+//         }
+//     });
+// }
 
 
 $(function () {

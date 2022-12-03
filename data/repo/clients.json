@@ -151,13 +151,13 @@
     },
     {
         "id": 2,
-        "prenom": "Mathias",
-        "nom": "Thomas",
-        "age": 18,
-        "adresse": "1 rue de terre",
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
         "pays": "Canada",
-        "courriel": "qwer@tyu.com",
-        "mdp": "$2b$08$SYOkCCz.wRs49Pv89.ohP.e.uoiQGcya7y5Vw9bRCAqmGtyoP6hi2",
+        "courriel": "saiatama@opm.com",
+        "mdp": "$2b$08$DMX32Tdt/Pihs6vOpZNoOO3FHxkuiat54tA4.8WSVpM3S/qyO4UlG",
         "panier": {
             "valeur": 0,
             "items": []
@@ -166,37 +166,28 @@
     },
     {
         "id": 3,
-        "prenom": "Caroline",
-        "nom": "Lacroix",
-        "age": 22,
-        "adresse": "1199 Rue du Saint Brieux",
-        "pays": "dsdas",
-        "courriel": "caro9.lacroix@hotmail.com",
-        "mdp": "$2b$08$kO05/X1/wVmcG.GWbQ5YCOHN47C5gxhwhl4q8GijYJyZKA8DIHMni",
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "2@2.com",
+        "mdp": "$2b$08$m2fOohaWawSpI/wHs8/HHube1RBg977eEQt2l4nImy86G6oL0N/4G",
         "panier": {
-            "valeur": 109.98,
-            "items": [
-                {
-                    "id": 0,
-                    "idProduit": 0,
-                    "nomProduit": "PreJym",
-                    "descriptionProduit": "A precise blend of 13 ingredients at full doses that have been shown through research and decades in the gym, to enhance training",
-                    "prix": 54.99,
-                    "quantite": 2
-                }
-            ]
+            "valeur": 0,
+            "items": []
         },
         "historique": []
     },
     {
         "id": 4,
-        "prenom": "Simon",
-        "nom": "Tremblay",
-        "age": 22,
-        "adresse": "1605 brulotte",
-        "pays": "canada",
-        "courriel": "tremblaysimon140@gmail.com",
-        "mdp": "$2b$08$ZOhySFHPUy5d6cBhH9xLtuZiQlLlPavTtoow8Gz6ou/w7QDjtVC9e",
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "3@2.com",
+        "mdp": "$2b$08$E69S26WedN9oxuIHTbN9q.f135bdfcKBEAN/zh.a2UY9i.TE2kHM.",
         "panier": {
             "valeur": 0,
             "items": []
@@ -205,16 +196,55 @@
     },
     {
         "id": 5,
-        "prenom": "Coco",
-        "nom": "Caca",
-        "age": 12,
-        "adresse": "2 fdsfs ",
-        "pays": "Inde",
-        "courriel": "rewew@12rfew.com",
-        "mdp": "$2b$08$cOFx7X9HX63mjIsRCcaMMOYxP1exbxZCIsSn8Bg0m6KQ3/6ac/X22",
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "4@2.com",
+        "mdp": "$2b$08$8gOkDVw0TjQ8WvhyT.Lr6uOW7ffL1Ra671JqJhejXgN/Z6cmC8lXu",
         "panier": {
             "valeur": 0,
             "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 6,
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 30,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "5@2.com",
+        "mdp": "$2b$08$BVaim4su6CGjMGQ1RjmizeM.G6SXAhH.8.RIHxOlaRKA1s1Em99uS",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 7,
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Japan",
+        "courriel": "6@2.com",
+        "mdp": "$2b$08$JBdp5ZdFpwrCnMaect/VW.8REzyBamFVu5Z5yXyL4l1biCFhVLmnG",
+        "panier": {
+            "valeur": 109.94999999999999,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 10,
+                    "nomProduit": "GIFUBOWA Big 3L",
+                    "descriptionProduit": "Motivational Water Bottle with Time Marking",
+                    "prix": 21.99,
+                    "quantite": 5
+                }
+            ]
         },
         "historique": []
     }

@@ -25,6 +25,10 @@ router.get('/merci', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/merci.html'));
 });
 
+router.get('/confirmation', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/confirmation.html'));
+});
+
 router.get('/inscription', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/inscription.html'));
 });

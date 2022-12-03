@@ -48,13 +48,16 @@ function ConnexionUtilisateur() {
             console.log(result);
 
             if (result.role === 'admin') {
-                window.location.replace('#/accueil')
+                $('#enTeteGestionCommande').attr("hidden", false)
+                window.location.replace('#/ventes')
             } else {
+                $('#enTeteGestionCommande').attr("hidden", true)
                 window.location.replace('#/produit')
             }
+            changerTexteConnexion()
         },
         error: function (result) {
-            window.location.replace('#/');
+            alert("Mot de passe invalide")
         }
 
 
@@ -79,7 +82,7 @@ function changerTexteConnexion(){
 function deconnexion() {
 
     var elem = document.getElementById("wtv")
-
+    $('#enTeteGestionCommande').attr("hidden", true)
     $('#wtv').text("Connexion")
 
 }
@@ -88,7 +91,6 @@ function deconnexion() {
 function inscriptionClient() {
 
     console.log("fsfdrgra")
-    document.getElementById("texteInscription").style.display = " "
 
     let PRENOM = document.getElementById("prenom").value;
     let NOM = document.getElementById("nom").value;
@@ -98,28 +100,55 @@ function inscriptionClient() {
     let COURRIEL = document.getElementById("courriel").value;
     let MDP = document.getElementById("mdp").value;
 
+        $.ajax({
+            url: "/clients/",
+            method: "POST",
+            data: JSON.stringify({
+                "mdp": MDP,
+                "prenom": PRENOM,
+                "nom": NOM,
+                "age": AGE,
+                "adresse": ADRESSE,
+                "pays": PAYS,
+                "courriel": COURRIEL
+            }),
+            contentType: "application/json",
+        });
+}
+
+const verifInscription = () => {
+    let courriel = document.getElementById('courriel').value
     $.ajax({
-        url: "/clients/",
-        method: "POST",
-        data: JSON.stringify({
-            "mdp": MDP,
-            "prenom": PRENOM,
-            "nom": NOM,
-            "age": AGE,
-            "adresse": ADRESSE,
-            "pays": PAYS,
-            "courriel": COURRIEL
-        }),
-        contentType: "application/json",
-        // success: function (result){
-        //     document.getElementById(`messageValide`).setAttribute("style","display:block")
-        //     setTimeout(()=>{
-        //         document.getElementById(`messageValide`).setAttribute("style","display:none")
-        //     },2500)
-        // },
-        // error: function (result){
-        //     document.getElementById(`messageInvalide`).setAttribute("style","display:block")
-        // }
-    });
+        url: `/clients/`,
+        method: "GET",
+        data:{"courriel": courriel},
+        success: function (result) {
+            if(result.length == 0)
+                inscriptionClient()
+            else {
+                alert("Ce courriel existe déjà")
+            }
+        }
+    })
+
+}
+
+const verifConnexion = () => {
+    let courriel = document.getElementById('courriel').value;
+    console.log(courriel)
+    $.ajax({
+        url: `/clients/`,
+        method: "GET",
+        data:{"courriel": courriel},
+        success: function (result) {
+            console.log(result)
+            if(result.length == 0 && courriel != 'admin@admin.com') {
+                alert("Ce courriel n'existe pas, veuillez vous inscrire")
+            }
+            else {
+                ConnexionUtilisateur()
+            }
+        }
+    })
 
 }

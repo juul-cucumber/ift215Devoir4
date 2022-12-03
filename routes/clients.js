@@ -55,7 +55,8 @@ const rechercherClientValidation = {
     nom: Joi.string(),
     age: Joi.number().integer().positive(),
     pays: Joi.string(),
-    adresse: Joi.string()
+    adresse: Joi.string(),
+    courriel: Joi.string()
   })
 };
 
@@ -91,7 +92,7 @@ router.post('/', validate(nouveauClientValidation), gClients.ajouteClient.bind(g
  * La requête pour filtrer sera de la forme /clients?prenom=bla&nom=blo&age=2&pays=Canada&adresse=adre
  * Attention les espaces ne sont pas permis, il faut les remplacer par %20
  */
-router.get('/', validate(rechercherClientValidation, {}, {}), auth.admin, gClients.recupereClient.bind(gClients));
+router.get('/', validate(rechercherClientValidation, {}, {}), gClients.recupereClient.bind(gClients));
 
 /**
  * Retourne le client ayant l'id :idClient

@@ -102,10 +102,17 @@ class CollectionClient {
    * @param age age à trouver ou null pour ne pas le considérer
    * @param adresse adresse à trouver ou null pour ne pas le considérer
    * @param pays pays à trouver ou null pour ne pas le considérer
+   * @param courriel courriel à trouver ou null pour ne pas le considérer
    * @returns {*[]} Liste des clients qui correspondent
    */
-  rechercheClient(prenom, nom, age, adresse, pays) {
+  rechercheClient(prenom, nom, age, adresse, pays, courriel) {
     let listeLocale = [...this.liste_clients];
+    if (courriel) {
+      listeLocale = listeLocale.filter(function (elem) {
+        console.log(`On compare ${elem.courriel} à ${courriel}`)
+        return elem.courriel === courriel;
+      });
+    }
     if (prenom) { // sera vrai si prenom n'est pas: null, undefined, NaN, empty string (""), 0, false
       listeLocale = listeLocale.filter(function (elem) {
         return elem.prenom === prenom;
