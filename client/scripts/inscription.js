@@ -48,8 +48,10 @@ function ConnexionUtilisateur() {
             console.log(result);
 
             if (result.role === 'admin') {
-                window.location.replace('#/accueil')
+                $('#enTeteGestionCommande').attr("hidden", false)
+                window.location.replace('#/ventes')
             } else {
+                $('#enTeteGestionCommande').attr("hidden", true)
                 window.location.replace('#/produit')
             }
             changerTexteConnexion()
@@ -80,7 +82,7 @@ function changerTexteConnexion(){
 function deconnexion() {
 
     var elem = document.getElementById("wtv")
-
+    $('#enTeteGestionCommande').attr("hidden", true)
     $('#wtv').text("Connexion")
 
 }
@@ -88,9 +90,7 @@ function deconnexion() {
 
 function inscriptionClient() {
 
-    $('#texteInscription').text('Merci de votre inscription chez Pro-gramme!');
     console.log("fsfdrgra")
-    document.getElementById("texteInscription").style.display = " "
 
     let PRENOM = document.getElementById("prenom").value;
     let NOM = document.getElementById("nom").value;
@@ -118,22 +118,13 @@ function inscriptionClient() {
 
 const verifInscription = () => {
     let courriel = document.getElementById('courriel').value
-    let existe = false;
     $.ajax({
-        url: "/clients/",
+        url: `/clients/`,
         method: "GET",
+        data:{"courriel": courriel},
         success: function (result) {
-            result.forEach((item) => {
-                if(!existe) {
-                    if(item.courriel == courriel) {
-                        existe = true
-                    }
-                }
-            })
-            if(!existe) {
-                console.log(existe)
+            if(result.length == 0)
                 inscriptionClient()
-            }
             else {
                 alert("Ce courriel existe déjà")
             }
@@ -151,7 +142,7 @@ const verifConnexion = () => {
         data:{"courriel": courriel},
         success: function (result) {
             console.log(result)
-            if(result.length == 0) {
+            if(result.length == 0 && courriel != 'admin@admin.com') {
                 alert("Ce courriel n'existe pas, veuillez vous inscrire")
             }
             else {

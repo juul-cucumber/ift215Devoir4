@@ -148,5 +148,104 @@
                 "date": "2022-12-02T20:39:27.217Z"
             }
         ]
+    },
+    {
+        "id": 2,
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "saiatama@opm.com",
+        "mdp": "$2b$08$DMX32Tdt/Pihs6vOpZNoOO3FHxkuiat54tA4.8WSVpM3S/qyO4UlG",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 3,
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "2@2.com",
+        "mdp": "$2b$08$m2fOohaWawSpI/wHs8/HHube1RBg977eEQt2l4nImy86G6oL0N/4G",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 4,
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "3@2.com",
+        "mdp": "$2b$08$E69S26WedN9oxuIHTbN9q.f135bdfcKBEAN/zh.a2UY9i.TE2kHM.",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 5,
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "4@2.com",
+        "mdp": "$2b$08$8gOkDVw0TjQ8WvhyT.Lr6uOW7ffL1Ra671JqJhejXgN/Z6cmC8lXu",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 6,
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 30,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Canada",
+        "courriel": "5@2.com",
+        "mdp": "$2b$08$BVaim4su6CGjMGQ1RjmizeM.G6SXAhH.8.RIHxOlaRKA1s1Em99uS",
+        "panier": {
+            "valeur": 0,
+            "items": []
+        },
+        "historique": []
+    },
+    {
+        "id": 7,
+        "prenom": "Hervé",
+        "nom": "Labrie-Durand",
+        "age": 21,
+        "adresse": "1125 Rue Jogues",
+        "pays": "Japan",
+        "courriel": "6@2.com",
+        "mdp": "$2b$08$JBdp5ZdFpwrCnMaect/VW.8REzyBamFVu5Z5yXyL4l1biCFhVLmnG",
+        "panier": {
+            "valeur": 109.94999999999999,
+            "items": [
+                {
+                    "id": 0,
+                    "idProduit": 10,
+                    "nomProduit": "GIFUBOWA Big 3L",
+                    "descriptionProduit": "Motivational Water Bottle with Time Marking",
+                    "prix": 21.99,
+                    "quantite": 5
+                }
+            ]
+        },
+        "historique": []
     }
 ]
