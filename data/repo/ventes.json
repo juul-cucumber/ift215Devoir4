@@ -200,5 +200,22 @@
         ],
         "status": "en route",
         "date": "2022-12-02T20:39:27.217Z"
+    },
+    {
+        "id": 11,
+        "idClient": "8",
+        "montant": 109.98,
+        "produits": [
+            {
+                "id": 0,
+                "idProduit": 0,
+                "nomProduit": "PreJym",
+                "descriptionProduit": "A precise blend of 13 ingredients at full doses that have been shown through research and decades in the gym, to enhance training",
+                "prix": 54.99,
+                "quantite": 2
+            }
+        ],
+        "status": "préparée",
+        "date": "2022-12-03T01:19:32.670Z"
     }
 ]
